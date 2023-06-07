@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import { cardData, cardData2 } from "@constants";
 
 const CardComponents = () => {
 
@@ -26,15 +27,22 @@ const CardComponents = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper cursor-grab"
+                // Your additional customizations here
+                // Example: autoplay, navigation, etc.
+                autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                }}
+                navigation
             >
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
+                {cardData.map((card) => (
+                    <SwiperSlide key={card.id} className="w-fit">
+                        <Card img={card.img} text={card.text} description={card.description} />
+                    </SwiperSlide>
+                ))}
             </Swiper>
-
+            
             <Swiper
                 slidesPerView={3}
                 spaceBetween={1}
@@ -42,14 +50,22 @@ const CardComponents = () => {
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper cursor-grab"
+                // Your additional customizations here
+                // Example: autoplay, navigation, etc.
+                autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                }}
+                navigation
             >
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
-                <SwiperSlide className="w-fit"><Card /></SwiperSlide>
+                {cardData2.map((card) => (
+                    <SwiperSlide key={card.id} className="w-fit">
+                        <Card img={card.img} text={card.text} description={card.description} />
+                    </SwiperSlide>
+                ))}
             </Swiper>
+
         </div>
     );
 };
