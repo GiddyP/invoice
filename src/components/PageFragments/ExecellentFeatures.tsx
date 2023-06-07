@@ -1,6 +1,6 @@
 import { createInvoice, excellentFeature } from "@public/images";
-import FeatureCard from "./FeatureCard";
-import FeatureCard2 from "./FeaturedCard2";
+import FeatureCard from "../FeatureCard";
+import FeatureCard2 from "../FeaturedCard2";
 
 const ExecellentFeatures = () => {
     return (
@@ -16,7 +16,7 @@ const ExecellentFeatures = () => {
                 icon={excellentFeature}
                 className="mt-20"
             />
-          
+
             <FeatureCard2
                 text1="Create invoices quickly in less than 3 minutes"
                 text2="Wait 3 minutes, and your invoice will be ready soon, 3 minutes is 3 minutes no delay"
@@ -32,7 +32,7 @@ const ExecellentFeatures = () => {
                 icon={excellentFeature}
                 className="mt-20"
             />
-            
+
         </section>
     );
 };

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Navbar from './PageFragments/Navbar';
-import Footer from './Footer';
+import Footer from './PageFragments/Footer';
 
 interface AppLayoutProps {
     children: ReactNode;

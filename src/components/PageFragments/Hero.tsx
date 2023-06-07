@@ -1,5 +1,5 @@
-import AnimatedText from "./Reusables/AnimatedText";
-import Button from "./Reusables/Button";
+import AnimatedText from "../Reusables/AnimatedText";
+import Button from "../Reusables/Button";
 
 const Hero = () => {
   return (

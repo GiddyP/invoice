@@ -1,4 +1,4 @@
-import { ArrowDownIcon, VectorStickIcon } from "./Reusables/SvgIcons";
+import { ArrowDownIcon, VectorStickIcon } from "../Reusables/SvgIcons";
 
 interface LiTextProps {
     text: string;
@@ -15,7 +15,7 @@ const LiText = ({ text, text2, className, iconClassName }: LiTextProps) => {
             <li className={`text-[#292D32] text-2xl w-[90%] py-8 ${ className }`} >
                 <div className="flex justify-between items-center mb-6">
                     <h4 className="text-3xl font-[600]">{text}</h4>
-                    <ArrowDownIcon className={`w-[42px] ${iconClassName}`} />
+                    <ArrowDownIcon className={`w-[42px] ${ iconClassName }`} />
                 </div>
 
                 <span className="text-lg">{text2}</span>
@@ -38,7 +38,7 @@ const FindAnswers = () => {
 
                     <LiText text="1. Delivery between countries" text2="Send your package now anywhere safely. You can also monitor the journey of your package regularly." className="border-b-[1px] border-b-[#818181]" />
                     <LiText text="2. Delivery between countries" className="border-b-[1px] border-b-[#818181]" iconClassName="transform -rotate-90" />
-                    <LiText text="3. Delivery between countries" iconClassName="transform -rotate-90"  />
+                    <LiText text="3. Delivery between countries" iconClassName="transform -rotate-90" />
                 </ul>
             </div>
         </section>

@@ -2,14 +2,14 @@ import { Cube3d, sendArrow, sendArrow2, sheild } from '@public/icons';
 import { WorldImage } from '@public/images';
 import AppLayout from '@src/components/AppLayout';
 import CardComponents from '@src/components/CardComponents';
-import ExecellentFeatures from '@src/components/ExecellentFeatures';
-import ExpenseManager from '@src/components/ExpenseManager';
-import FindAnswers from '@src/components/FindAnswers';
-import Footer from '@src/components/Footer';
-import Hero from '@src/components/Hero';
+import ExecellentFeatures from '@src/components/PageFragments/ExecellentFeatures';
+import ExpenseManager from '@src/components/PageFragments/ExpenseManager';
+import FindAnswers from '@src/components/PageFragments/FindAnswers';
+import Footer from '@src/components/PageFragments/Footer';
+import Hero from '@src/components/PageFragments/Hero';
 import LargeCard from '@src/components/LargeCard';
 import SmallCard from '@src/components/SmallCard';
-import Subscription from '@src/components/Subscription';
+import Subscription from '@src/components/PageFragments/Subscription';
 import Image from 'next/image';
 
 const page = () => {

@@ -1,7 +1,7 @@
 'use client';
 import React, { FormEvent, useState } from 'react';
-import Button from './Reusables/Button';
-import { MailIcon } from './Reusables/SvgIcons';
+import Button from '../Reusables/Button';
+import { MailIcon } from '../Reusables/SvgIcons';
 
 const Subscription = () => {
     const [email, setEmail] = useState('');

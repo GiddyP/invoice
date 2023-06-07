@@ -1,6 +1,6 @@
 import { invoiceLogo } from "@public/images";
 import Image from "next/image";
-import LogoImages from "./Reusables/LogoImages";
+import LogoImages from "../Reusables/LogoImages";
 import { logo1, logo2, logo3 } from "@public/icons";
 
 interface AboutSectionProps {
@@ -23,7 +23,7 @@ const RenderAboutSection = ({ sectionTitle, listItems }: AboutSectionProps) => (
 const Footer = () => {
   return (
     <section className="h-[70vh] w-full flex flex-col items-center bg-white py-4 mx-auto">
-      <div className="flex mt-8 pb-12 mb-6 w-[80%] border-b-[1px] border-b-[#A0A0A0]">
+      <div className="flex mt-8 pb-12 mb-3 w-[80%] border-b-[1px] border-b-[#A0A0A0]">
         <div className="flex flex-col w-[50%] py-24 gap-4">
           <div className="flex gap-3">
             <div className="w-[60px] h-[30px] relative">
@@ -81,8 +81,6 @@ const Footer = () => {
       </div>
 
       <span className="text-center text-[#7E7E7E] text-sm leading-[22px]">© Copyright 2022 Homely. All rights reserved.</span>
-
-
     </section>
   );
 };
