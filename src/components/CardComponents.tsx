@@ -16,7 +16,7 @@ const CardComponents = () => {
     return (
         <div className="bg-white pt-16">
             <div className="w-[50%] mx-auto">
-                <h2 className="text-center text-4xl leading-[150%]">Over 1.5 million+ people are already using our app</h2>
+                <h2 className="text-center text-3xl leading-[150%] mx-16 font-[500]">Over 1.5 million+ people are already using our app</h2>
             </div>
 
             <Swiper

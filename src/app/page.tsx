@@ -24,9 +24,9 @@ const page = () => {
           priority
         />
         <Hero />
-        <div className="h-[120vh] bg-white grid place-items-center py-8">
+        <div className="h-[150vh] 2xl:h-[130vh] bg-white flex justify-between items-center flex-col gap-12 py-24">
           <LargeCard />
-          <div className="flex justify-between w-[80%]">
+          <div className="flex justify-between w-[80%] h-[354px]">
             <SmallCard
               icon1={sheild}
               icon2={sendArrow}

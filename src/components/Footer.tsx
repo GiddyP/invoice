@@ -1,5 +1,7 @@
 import { invoiceLogo } from "@public/images";
 import Image from "next/image";
+import LogoImages from "./Reusables/LogoImages";
+import { logo1, logo2, logo3 } from "@public/icons";
 
 interface AboutSectionProps {
   sectionTitle: string;
@@ -9,8 +11,8 @@ interface AboutSectionProps {
 
 const RenderAboutSection = ({ sectionTitle, listItems }: AboutSectionProps) => (
   <div className="w-full flex flex-col">
-    <span className="mb-5 text-lg font-bold">{sectionTitle}</span>
-    <ul className="flex flex-col gap-3 text-lg text-[#7E7E7E]">
+    <span className="mb-10 text-lg font-bold">{sectionTitle}</span>
+    <ul className="flex flex-col gap-6 text-lg text-[#7E7E7E] leading-[150%]">
       {listItems.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -23,18 +25,39 @@ const Footer = () => {
     <section className="h-[70vh] w-full flex flex-col items-center bg-white py-4 mx-auto">
       <div className="flex mt-8 pb-12 mb-6 w-[80%] border-b-[1px] border-b-[#A0A0A0]">
         <div className="flex flex-col w-[50%] py-24 gap-4">
-          <div className="flex gap-3 py-2">
-            <Image
-              src={invoiceLogo}
-              alt='logo'
-              width={50}
-              height={50}
-              priority
-            />
-            <h3 className="text-xl font-bold">Invoice</h3>
+          <div className="flex gap-3">
+            <div className="w-[60px] h-[30px] relative">
+              <LogoImages
+                img={logo1}
+                alt='logo1'
+                width={27}
+                className='absolute top-0'
+                duration={1.1}
+                y={-50}
+              />
+
+              <LogoImages
+                img={logo2}
+                alt='logo2'
+                width={31}
+                className='absolute top-0 left-[13px]'
+                duration={.9}
+                y={-50}
+              />
+
+              <LogoImages
+                img={logo3}
+                alt='logo3'
+                width={36}
+                className='absolute top-0 left-[30px]'
+                duration={.6}
+                y={-50}
+              />
+            </div>
+            <span className='font-bold text-2xl'>Invoice</span>
           </div>
 
-          <p className="mr-[100px] text-lg text-[#7E7E7E] leading-[150%]">Lorem ipsum dolor sit amet consectetur. Feugiat ac a risus et ullamcorper non.</p>
+          <p className="mr-[200px] text-lg text-[#7E7E7E] leading-[150%]">Lorem ipsum dolor sit amet consectetur. Feugiat ac a risus et ullamcorper non.</p>
         </div>
 
 
@@ -57,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <span className="text-center text-[#7E7E7E] text-sm">© Copyright 2022 Homely. All rights reserved.</span>
+      <span className="text-center text-[#7E7E7E] text-sm leading-[22px]">© Copyright 2022 Homely. All rights reserved.</span>
 
 
     </section>

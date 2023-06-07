@@ -6,7 +6,7 @@ const ExecellentFeatures = () => {
     return (
         <section className="py-16 px-24 min-h-screen bg-white">
             <div className="flex justify-center">
-                <h3 className="w-[50%] text-center text-4xl font-bold leading-[150%]">Excellent features that we provide for you</h3>
+                <h3 className="text-center text-5xl 2xl:text-6xl font-bold leading-[150%] mx-60 mb-10">Excellent features that we provide for you</h3>
             </div>
 
             <FeatureCard
@@ -32,7 +32,6 @@ const ExecellentFeatures = () => {
                 icon={excellentFeature}
                 className="mt-20"
             />
-
             
         </section>
     );

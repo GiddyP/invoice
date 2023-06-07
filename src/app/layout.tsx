@@ -42,7 +42,7 @@ export default function RootLayout ({
   const metadata = {
     title: `Invoice | ${ title }`,
     description,
-    icon: "/vercel.svg",
+    icon: "/images/invoice-logo.png",
   };
 
   return (

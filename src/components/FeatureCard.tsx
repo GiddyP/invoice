@@ -22,7 +22,7 @@ const FeatureCard = ({ text1, text2, buttonText, icon, className }: FeatureCardP
                 <FramerImage
                     src={icon}
                     alt='icon-image'
-                    width={420}
+                    width={500}
                     // height={50}
                     priority
                     whileHover={{ scale: 1.15 }}
@@ -31,10 +31,10 @@ const FeatureCard = ({ text1, text2, buttonText, icon, className }: FeatureCardP
             </div>
 
 
-            <div className="flex flex-col gap-7 w-[55%] pl-32 justify-center">
-                <h3 className="text-3xl leading-[1.8] font-bold">{text1}</h3>
-                <p className="text-[#7E7E7E] text-sm pr-24 leading-[1.5]">{text2}</p>
-                <Button text={buttonText} className="text-white text-sm font-semibold px-7 py-3 rounded-3xl bg-primary w-fit" />
+            <div className="flex flex-col gap-10 w-[55%] pl-32 justify-center">
+                <h3 className="text-4xl leading-[170%] font-bold text-[#292D32]">{text1}</h3>
+                <p className="text-[#7E7E7E] text-xl leading-[1.5]">{text2}</p>
+                <Button text={buttonText} className="text-white text-xl font-semibold px-10 py-4 rounded-[100px] bg-primary w-fit" />
             </div>
         </div>
     );
