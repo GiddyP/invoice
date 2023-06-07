@@ -1,3 +1,6 @@
+import { createInvoice, excellentFeature } from "@public/images";
+import { StaticImageData } from "next/image";
+
 export interface CardDataProps {
     id: number;
     img: string;
@@ -82,4 +85,25 @@ export const cardData2: CardDataProps[] = [
         text: "Victoria Husband",
         description: "Very satisfied with this insurance service. strongly guarantees us in the future to be prosperous",
     },
-];  
+];
+
+
+export interface SectionProps {
+    sectionTitle: string;
+    listItems: string[];
+}
+
+export const aboutData: SectionProps[] = [
+    {
+        sectionTitle: 'About',
+        listItems: ['About us', 'Features', 'Blog', 'Pricing'],
+    },
+    {
+        sectionTitle: 'Company',
+        listItems: ['How we work', 'Press Room', 'Jobs', 'Community'],
+    },
+    {
+        sectionTitle: 'Legal',
+        listItems: ['Terms of use', 'Privacy Policy', 'Security Policy', 'Cookie Settings'],
+    },
+];

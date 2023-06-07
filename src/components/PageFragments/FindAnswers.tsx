@@ -1,4 +1,4 @@
-import { ArrowDownIcon, VectorStickIcon } from "../Reusables/SvgIcons";
+import { ArrowDownIcon } from "../Reusables/SvgIcons";
 
 interface LiTextProps {
     text: string;
@@ -6,7 +6,6 @@ interface LiTextProps {
     className?: string;
     iconClassName?: string;
 }
-
 
 const LiText = ({ text, text2, className, iconClassName }: LiTextProps) => {
 

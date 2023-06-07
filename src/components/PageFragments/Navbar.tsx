@@ -2,10 +2,46 @@
 import Link from 'next/link';
 import Button from '../Reusables/Button';
 import { usePathname } from 'next/navigation';
-import Image, { StaticImageData } from 'next/image';
-import { invoiceLogo } from '@public/images';
+import { StaticImageData } from 'next/image';
 import { logo1, logo2, logo3 } from '@public/icons';
 import LogoImages from '../Reusables/LogoImages';
+
+
+interface LogoProps {
+    img: StaticImageData;
+    alt: string;
+    width: number;
+    className: string;
+    duration: number;
+    y: number;
+}
+
+const logoData: LogoProps[] = [
+    {
+        img: logo1,
+        alt: 'logo1',
+        width: 27,
+        className: 'absolute top-0',
+        duration: 1.1,
+        y: 20,
+    },
+    {
+        img: logo2,
+        alt: 'logo2',
+        width: 31,
+        className: 'absolute top-0 left-[13px]',
+        duration: 0.9,
+        y: 20,
+    },
+    {
+        img: logo3,
+        alt: 'logo3',
+        width: 36,
+        className: 'absolute top-0 left-[30px]',
+        duration: 0.6,
+        y: 20,
+    },
+];
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -14,37 +50,14 @@ const Navbar = () => {
             <div className="flex w-4/5 h-10 justify-between items-center">
                 <section className="flex gap-2 items-center">
                     <div className="w-[60px] h-[30px] relative">
-                        <LogoImages
-                            img={logo1}
-                            alt='logo1'
-                            width={27}
-                            className='absolute top-0'
-                            duration={1.1}
-                            y={20}
-                        />
-
-                        <LogoImages
-                            img={logo2}
-                            alt='logo2'
-                            width={31}
-                            className='absolute top-0 left-[13px]'
-                            duration={.9}
-                            y={20}
-                        />
-
-                        <LogoImages
-                            img={logo3}
-                            alt='logo3'
-                            width={36}
-                            className='absolute top-0 left-[30px]'
-                            duration={.6}
-                            y={20}
-                        />
+                        {logoData.map((logo, index) => (
+                            <LogoImages key={index} {...logo} />
+                        ))}
                     </div>
                     <span className='font-semibold 2xl:font-bold text-xl'>Invoice</span>
                 </section>
 
-                <nav className='flex gap-12 font-[600] text-sm'>
+                <nav className='flex gap-12 font-semibold text-sm'>
                     <Link href='/' className={`${ pathname === '/' ? 'text-[#141414]' : 'text-[#B3B3B3]' }`}>
                         Home
                     </Link>

@@ -1,13 +1,48 @@
-import { invoiceLogo } from "@public/images";
-import Image from "next/image";
+import { StaticImageData } from "next/image";
 import LogoImages from "../Reusables/LogoImages";
 import { logo1, logo2, logo3 } from "@public/icons";
+import { aboutData } from "@constants";
 
 interface AboutSectionProps {
   sectionTitle: string;
   listItems: string[];
 }
 
+interface LogoProps {
+  img: StaticImageData;
+  alt: string;
+  width: number;
+  className: string;
+  duration: number;
+  y: number;
+}
+
+const logoData: LogoProps[] = [
+  {
+    img: logo1,
+    alt: 'logo1',
+    width: 27,
+    className: 'absolute top-0',
+    duration: 1.1,
+    y: -50,
+  },
+  {
+    img: logo2,
+    alt: 'logo2',
+    width: 31,
+    className: 'absolute top-0 left-[13px]',
+    duration: 0.9,
+    y: -50,
+  },
+  {
+    img: logo3,
+    alt: 'logo3',
+    width: 36,
+    className: 'absolute top-0 left-[30px]',
+    duration: 0.6,
+    y: -50,
+  },
+];
 
 const RenderAboutSection = ({ sectionTitle, listItems }: AboutSectionProps) => (
   <div className="w-full flex flex-col">
@@ -27,32 +62,9 @@ const Footer = () => {
         <div className="flex flex-col w-[50%] py-24 gap-4">
           <div className="flex gap-3">
             <div className="w-[60px] h-[30px] relative">
-              <LogoImages
-                img={logo1}
-                alt='logo1'
-                width={27}
-                className='absolute top-0'
-                duration={1.1}
-                y={-50}
-              />
-
-              <LogoImages
-                img={logo2}
-                alt='logo2'
-                width={31}
-                className='absolute top-0 left-[13px]'
-                duration={.9}
-                y={-50}
-              />
-
-              <LogoImages
-                img={logo3}
-                alt='logo3'
-                width={36}
-                className='absolute top-0 left-[30px]'
-                duration={.6}
-                y={-50}
-              />
+              {logoData.map((logo, index) => (
+                <LogoImages key={index} {...logo} />
+              ))}
             </div>
             <span className='font-bold text-2xl'>Invoice</span>
           </div>
@@ -62,21 +74,9 @@ const Footer = () => {
 
 
         <div className="flex justify-between w-[50%] py-9">
-          <RenderAboutSection
-            sectionTitle="About"
-            listItems={['About us', 'Features', 'Blog', 'Pricing']}
-          />
-
-          <RenderAboutSection
-            sectionTitle="Company"
-            listItems={['How we work', 'Press Room', 'Jobs', 'Community']}
-          />
-
-          <RenderAboutSection
-            sectionTitle="Legal"
-            listItems={['Terms of use', 'Privacy Policy', 'Security Policy', 'Cookie Settings']}
-          />
-
+          {aboutData.map((section, index) => (
+            <RenderAboutSection key={index} {...section} />
+          ))}
         </div>
       </div>
 
