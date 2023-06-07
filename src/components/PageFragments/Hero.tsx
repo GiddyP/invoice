@@ -16,7 +16,7 @@ const Hero = () => {
 
         <Button
           text="Try For Free"
-          className="text-white text-sm font-semibold px-12 py-5 rounded-[100px] bg-primary place-self-center design"
+          className="text-white text-sm font-semibold px-12 py-4 rounded-[100px] bg-primary place-self-center design"
         />
       </section>
     </div>

@@ -17,7 +17,7 @@ const Subscription = () => {
     return (
         <section className='h-screen flex flex-col items-center justify-around bg-white'>
 
-            <Button text='Try for free' className="text-white text-xl font-semibold px-9 py-5 rounded-[100px] bg-primary w-fit mt-6" />
+            <Button text='Try for free' className="text-white text-xl font-semibold px-9 py-3 rounded-[100px] bg-primary w-fit mt-6" />
 
             <div className="flex flex-col w-[80%] h-[400px] justify-center items-center pt-8 pb-5 px-36 bg-primary text-white gap-8 rounded-[60px]">
                 <h3 className='text-5xl mx-32 leading-[130%] font-semibold text-center'>Subscribe to our Newsletter</h3>
@@ -35,7 +35,7 @@ const Subscription = () => {
                         />
                     </div>
 
-                    <Button type='submit' text='Subscribe' className="text-white text-xl px-8 py-4 rounded-[100px] bg-[#292D32] w-fit" />
+                    <Button type='submit' text='Subscribe' className="text-white text-lg px-8 py-3 rounded-[100px] bg-[#292D32] w-fit" />
                 </form>
             </div>
         </section>

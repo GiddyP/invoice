@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 <section className="flex gap-7 text-sm font-[600]">
                     <Button text='Sign Up' />
-                    <Button text='Login' className='text-white px-12 py-3 rounded-3xl bg-primary' />
+                    <Button text='Login' className='text-white px-12 py-2.5 rounded-3xl bg-primary' />
                 </section>
             </div>
         </header>
